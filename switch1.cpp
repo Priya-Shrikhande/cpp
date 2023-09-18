@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+int c1=0,s1=0,rev=0,temp=0,c=0,r=0;
 int main()
 {
     int n;
@@ -21,7 +22,7 @@ int main()
         break;
 
         case 2:
-        int num2,i,c;
+        int num2,i;
         cout<<"\n enter the number=";
         cin>>num2;
         for(i=2;i<=num2;i++)
@@ -42,17 +43,17 @@ int main()
         break;
 
         case 3:
-        int num3,r,temp,sum=0;
+        int num3;
         cout<<"\n enter the number=";
         cin>>num3;
         temp=num3;
         while(num3>0)
         {
         r=num3%10;
-        sum=sum+r*r*r;
+        s1=s1+r*r*r;
         num3=num3/10;
         }
-        if(temp==sum)
+        if(temp==s1)
         {
             cout<<"\nit is a armstrong number";
         }
@@ -63,17 +64,17 @@ int main()
         break;
 
         case 4:
-        int num4,r1,rev=0,temp1;
-        cout<<"\n enter the number";
+        int num4,r1;
+        cout<<"\n enter the number=";
         cin>>num4;
-        temp1=num4;
+        temp=num4;
         while(num4!=0)
         {
             r1=num4%10;
             rev=rev*10+r1;
             num4=num4/10;
         }
-        if(temp1==rev)
+        if(temp==rev)
         {
             cout<<"\nit is a palindrome number";
         }
@@ -81,5 +82,8 @@ int main()
         {
             cout<<"\nit is not a palindrome number";
         }
+        break;
+        default:
+        cout<<"invalid option";
     }
 }
